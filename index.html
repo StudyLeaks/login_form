@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated Glassmorphism Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div id="scene">
+          <div class="layer" data-depth-x="-0.5" data-depth-y="0.25">
+            <img src="moon.png" class="moon" />
+          </div>
+          <div class="layer" data-depth-x="0.15">
+            <img src="mountains02.png" />
+          </div>
+          <div class="layer" data-depth-x="0.25">
+            <img src="mountains01.png" />
+          </div>
+          <div class="layer" data-depth-x="-0.25"><img src="road.png" /></div>
+        </div>
+      </div>
+      <div class="login" data-depth-x="-0.25">
+        <h2>登录</h2>
+        <div class="inputBox"><input type="text" placeholder="用户名"</div>
+        <div class="inputBox"><input type="password" placeholder="密码"</div>
+        <div class="inputBox">
+          <input type="submit" value="登入" id="btn" />
+        </div>
+        <div class="group">
+          <a href="#">忘记密码</a>
+          <a href="#">注册</a>
+        </div>
+      </div>
+    </section>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      var scene = document.getElementById("scene");
+      var parallax = new Parallax(scene);
+    </script>
+  </body>
+</html>
